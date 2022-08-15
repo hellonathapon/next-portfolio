@@ -1,8 +1,13 @@
 import type { NextPage } from "next";
+import { useRouter, NextRouter } from "next/router";
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import useLocale from "../utils/useLocale";
 
 const Home: NextPage = () => {
+  const router: NextRouter = useRouter();
+  const { locale } = router;
+  const lang = useLocale(locale);
+
   return (
     <div className="h-full">
       <Head>
@@ -11,58 +16,102 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="w-full">
+      <main className="w-full pb-10 px-10 md:px-0 dark:readable-white-text">
         <div className="max-w-screen-sm mx-auto w-full">
-          <h1 className="text-6xl text-center mt-20">Nathapon</h1>
-
-          <p className={styles.description}>
-            Get started by editing{" "}
-            <code className={styles.code}>pages/index.tsx</code>
-          </p>
-
           <div>
-            <h1 className="text-3xl">Nathapon Boonthawngkaew</h1>
-            <p className="text-lg">Web / Mobile Developer, Pixel Artist</p>
+            <figure>
+              <img src="bg.jpg" alt="" />
+            </figure>
+          </div>
+          {/* <h1 className="text-6xl text-center mt-20">Nathapon</h1>
+          <pre className="text-center">{`string greeting() => hello world;`}</pre> */}
+
+          <div className="tracking-wider mt-10">
+            <div className="px-5 flex flex-col justify-between items-center md:flex-row">
+              <article className="flex-1">
+                <h1 className="text-3xl dark:col-title font-bold font-MPLUSRounded1c">
+                  {lang.creator.name}
+                </h1>
+                <p className="text-lg font-MPLUSRounded1c">
+                  {lang.creator.title}
+                </p>
+              </article>
+              <figure className="w-28 h-28 rounded-full overflow-hidden">
+                <img
+                  className="w-full"
+                  src="https://mymodernmet.com/wp/wp-content/uploads/2017/10/highland-cattle-calves-12.jpg"
+                  alt=""
+                />
+              </figure>
+            </div>
+
             <div className="mt-5">
-              <p className="font-bold underline">Bio</p>
-              <p>1996 Born in Nakhon Sri thammarat, Thailand</p>
-              <p>
-                2020 Completed Bechelor Degree in Humanities at MCU Buddhist
-                University, Ayuddhaya
-              </p>
-              <p>
-                2022-Present Work at Junior Web developer at Kratos tracking,
-                Bangkok
-              </p>
-              <p>
+              <div className="flex">
+                <p className="font-bold underline text-lg mb-3">Work</p>
+              </div>
+              <p className="dark:readable-white-text">{lang.works.text}</p>
+            </div>
+
+            <div className="mt-5">
+              <p className="font-bold underline text-lg mb-3">Bio</p>
+
+              <div className="flex gap-3">
+                <p>
+                  <b>1996</b>
+                </p>
+                <p className="dark:readable-white-text">{lang.bio[1996]}</p>
+              </div>
+
+              <div className="flex gap-3">
+                <p>
+                  <b>2020</b>{" "}
+                </p>
+                <p className="dark:readable-white-text">{lang.bio[2020]}</p>
+                {/* <a
+                  className="underline dark:text-sky-500"
+                  href="https://www.mcu.ac.th/"
+                >
+                  MCU Buddhist University
+                </a>
+                , Ayutthaya */}
+              </div>
+
+              <div className="flex gap-3">
+                <p>
+                  <b className="">2022-Present</b>
+                </p>
+                <p className="dark:readable-white-text">{lang.bio.present}</p>
+              </div>
+
+              {/* <p>
                 I am a kind of person who found coding is fun not just a career
                 to earning, Everything related to Computer Sciences, technology,
                 Space i love it
-              </p>
-            </div>
-            <div className="mt-5">
-              <p className="font-bold underline">Work</p>
-              <p>
-                Takuya is a freelance and a full-stack developer based in Osaka
-                with a passion for building digital services/stuff he wants. He
-                has a knack for all things launching products, from planning and
-                designing all the way to solving real-life problems with code.
-                When not online, he loves hanging out with his camera.
-                Currently, he is living off of his own product called Inkdrop.
-                He publishes content for marketing his products and his YouTube
-                channel called "Dev as Life" has more than 100k subscribers.
-              </p>
+              </p> */}
             </div>
 
-            <div className="mt-5">
-              <p className="font-bold underline">Skills</p>
+            <div className="mt-7">
+              <p className="font-bold underline text-lg mb-3">Skills</p>
               <p>Programming Languages: Typescript, Go, Dart, Python</p>
               <p>Fields: Web development, Mobile development, Data analysis,</p>
             </div>
+
             <div className="mt-5">
-              <p className="font-bold underline">Contact</p>
-              <p>Line: </p>
-              <p>Email: hellonathapon@gmail.com</p>
+              <p className="font-bold underline text-lg mb-3">Contact</p>
+
+              <div className="flex items-center mb-3">
+                <figure className="w-7 h-7">
+                  <img className="w-full" src="line-icon.png" alt="" />
+                </figure>
+                {/* <p>Line:</p> */}
+                <pre className="ml-3">Line ID: hellonathapon</pre>
+              </div>
+              <div className="flex items-center">
+                <figure className="w-7 h-7">
+                  <img className="w-full" src="gmail-icon.png" alt="" />
+                </figure>
+                <pre className="ml-3">hellonathapon@gmail.com</pre>
+              </div>
             </div>
           </div>
         </div>

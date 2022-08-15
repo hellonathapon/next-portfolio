@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function Footer() {
   return (
-    <footer className={styles.footer}>
+    <footer className="h-14 border-t border-t-[#eaeaea] dark:border-t-slate-600 flex justify-center items-center">
       {/* <a
         href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
         target="_blank"
@@ -15,7 +15,9 @@ function Footer() {
           <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
         </span>
       </a> */}
-      <p>© {new Date().getFullYear()} Nathapon B. All Rights Reserved.</p>
+      <p className="text-center">
+        © {new Date().getFullYear()} Nathapon B. All Rights Reserved.
+      </p>
     </footer>
   );
 }

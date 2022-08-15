@@ -5,7 +5,14 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        Poppins: ["Poppins", "Sarabun"], // default en
+        MPLUSRounded1c: ["MPLUSRounded1c", "Kanit"], // header text
+        Kanit: ["Kanit"], // for th charecters
+      },
+    },
   },
   plugins: [],
+  darkMode: "class",
 };

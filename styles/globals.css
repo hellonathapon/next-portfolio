@@ -18,3 +18,72 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@layer base {
+  @font-face {
+    font-family: "MPLUSRounded1c";
+    src: local(""),
+      url("/font/m-plus-rounded-1c/MPLUSRounded1c-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "MPLUSRounded1c";
+    src: local(""),
+      url("/font/m-plus-rounded-1c/MPLUSRounded1c-Regular.ttf")
+        format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Poppins";
+    src: local(""), url("/font/poppins/Poppins-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* for thai headers charecters specifically */
+  @font-face {
+    font-family: "Kanit";
+    src: local(""), url("/font/kanit/Kanit-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0E00 - U+0E7F;
+  }
+  @font-face {
+    font-family: "Kanit";
+    src: local(""), url("/font/kanit/Kanit-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0E00 - U+0E7F;
+  }
+  @font-face {
+    font-family: "Sarabun";
+    src: local(""), url("/font/sarabun/Sarabun-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0E00 - U+0E7F;
+  }
+
+  .fourOhFour {
+    height: calc(100vh - 3.5rem);
+  }
+  .col-title {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(90deg, #007cf0, #00dfd8);
+  }
+  .readable-white-text {
+    color: rgba(255, 255, 255, 0.92);
+  }
+
+  .side_bar {
+    margin-left: 200px;
+  }
+}

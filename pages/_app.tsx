@@ -1,14 +1,20 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { Header, Footer } from "../components";
+import { ThemeProvider } from "next-themes";
+import Sidebar from "../components/Sidebar";
+import { AppProvider } from "../context/AppContext";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
-      <Header />
-      <Component {...pageProps} />
-      <Footer />
-    </>
+    <AppProvider>
+      <ThemeProvider enableSystem={true} attribute="class">
+        <Header />
+        <Sidebar />
+        <Component {...pageProps} />
+        <Footer />
+      </ThemeProvider>
+    </AppProvider>
   );
 }
 
