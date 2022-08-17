@@ -9,8 +9,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <AppProvider>
       <ThemeProvider enableSystem={true} attribute="class">
-        <Header />
         <Sidebar />
+        <Header />
         <Component {...pageProps} />
         <Footer />
       </ThemeProvider>

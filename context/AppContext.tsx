@@ -1,5 +1,5 @@
 import React, { useState, ReactNode, useReducer } from "react";
-import { MechanismReducer, IMechanism } from "./mechanismReducer";
+import { MechanismReducer } from "./mechanismReducer";
 
 export type AppMechanismType = {
   sidebar: boolean;
@@ -24,7 +24,7 @@ const AppContext = React.createContext<{
 //* reducers can scale up and maintain with root reducer, basically combind them together.
 const mainReducer = (
   { appMechanism }: InitialStateType,
-  action: IMechanism
+  action: any
 ): InitialStateType => ({
   appMechanism: MechanismReducer(appMechanism, action),
 });
@@ -34,7 +34,7 @@ interface Props {
 }
 
 const AppProvider = ({ children, ...props }: Props) => {
-  const [state, dispatch] = React.useReducer(mainReducer, initialState); //* useReducer(AType, AType) >> should be the same type
+  const [state, dispatch] = React.useReducer(mainReducer, initialState); //* useReducer(AType, AType) >> should return same type
   return (
     <AppContext.Provider value={{ state, dispatch }}>
       {children}
