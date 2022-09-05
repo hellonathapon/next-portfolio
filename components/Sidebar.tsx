@@ -13,7 +13,7 @@ function Sidebar() {
   return (
     <div
       className={`fixed z-50 h-screen w-56 md:hidden bg-white dark:bg-stone-900 ${
-        state.appMechanism.sidebar ? "ml-0" : "-ml-56"
+        state.appMechanics.sidebar ? "ml-0" : "-ml-56"
       } transition-all`}
     >
       <ul className="p-10 flex flex-col gap-5">

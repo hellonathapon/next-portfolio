@@ -3,7 +3,7 @@ import Head from "next/head";
 import { Project } from "../components";
 import { AppContext } from "../context/AppContext";
 import CowdyIMG from "../public/cowdy.png";
-import MoblieIMG from "../public/mobile.png";
+import CatloafIMG from "../public/catloaf.png";
 import { StaticImageData } from "next/image";
 import { StackColors } from "../utils/parseColor";
 
@@ -33,9 +33,9 @@ function work() {
       },
     },
     {
-      title: "Hotel X",
-      desc: "Mobile Todo List Application Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum....",
-      imgPath: MoblieIMG,
+      title: "Catloaf",
+      desc: "Mobile Todo List Application to manage your daily life tasks",
+      imgPath: CatloafIMG,
       stack: ["Flutter", "Golang", "Firebase"],
       urls: {
         liveURL: null,
@@ -44,7 +44,7 @@ function work() {
     },
     {
       title: "Weathering with Me API",
-      desc: "Simple blazing fast API server, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum....",
+      desc: "Simple weather API built with Golang to daily serving based on your selected location",
       imgPath: CowdyIMG,
       stack: ["Golang"],
       urls: {
@@ -54,13 +54,14 @@ function work() {
     },
   ]);
 
-  function closeSidebar(): void {
+  function closeAllPanels(): void {
+    dispatch({ type: "CLOSE_LANG" });
     dispatch({ type: "CLOSE_SIDEBAR" });
   }
 
   return (
     <div
-      onClick={closeSidebar}
+      onClick={closeAllPanels}
       className="max-w-screen-sm mx-auto w-full h-full pt-20"
     >
       <Head>

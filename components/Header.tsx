@@ -3,6 +3,7 @@ import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { AppContext } from "../context/AppContext";
+import LangChangeControler from "./LangChangeControler";
 
 function header() {
   const { systemTheme, theme, setTheme } = useTheme();
@@ -148,14 +149,16 @@ function header() {
         </ul>
 
         <div className="self-end ml-auto flex">
-          {/* locales */}
-          <select
+          {/* //####################### custom change languages ####################### */}
+          <LangChangeControler />
+
+          {/* <select
             className="appearance-none mr-3 px-3 dark:bg-white bg-white dark:text-gray-900 text-gray-900 rounded-md"
             onChange={handleChangeLang}
           >
             <option value="en">English</option>
             <option value="th">ไทย</option>
-          </select>
+          </select> */}
 
           {/* dark mode toggles */}
           {renderThemeChanger()}

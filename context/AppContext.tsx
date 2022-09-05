@@ -1,18 +1,26 @@
 import React, { useState, ReactNode, useReducer } from "react";
-import { MechanismReducer } from "./mechanismReducer";
+import { MechanicsReducer } from "./mechanicsReducer";
 
-export type AppMechanismType = {
+export type AppMechanicsType = {
   sidebar: boolean;
+  lang: {
+    isOpen: boolean;
+    selected: string;
+  };
 };
 
 //* STATE(S)
 type InitialStateType = {
-  appMechanism: AppMechanismType;
+  appMechanics: AppMechanicsType;
 };
 
 const initialState: InitialStateType = {
-  appMechanism: {
+  appMechanics: {
     sidebar: false,
+    lang: {
+      isOpen: false,
+      selected: "en",
+    },
   },
 };
 
@@ -23,10 +31,10 @@ const AppContext = React.createContext<{
 
 //* reducers can scale up and maintain with root reducer, basically combind them together.
 const mainReducer = (
-  { appMechanism }: InitialStateType,
+  { appMechanics }: InitialStateType,
   action: any
 ): InitialStateType => ({
-  appMechanism: MechanismReducer(appMechanism, action),
+  appMechanics: MechanicsReducer(appMechanics, action),
 });
 
 interface Props {
