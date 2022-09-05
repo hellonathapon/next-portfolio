@@ -24,7 +24,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="w-full pb-10 px-10 md:px-0 dark:readable-white-text">
+      <main className="w-full pb-10 px-7 md:px-0 dark:readable-white-text">
         <div className="max-w-screen-sm mx-auto w-full">
           <div>
             <figure>

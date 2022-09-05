@@ -42,16 +42,6 @@ function work() {
         sourceURL: "https://github.com/hellonathapon",
       },
     },
-    {
-      title: "Weathering with Me API",
-      desc: "Simple weather API built with Golang to daily serving based on your selected location",
-      imgPath: CowdyIMG,
-      stack: ["Golang"],
-      urls: {
-        liveURL: null,
-        sourceURL: "https://github.com/hellonathapon",
-      },
-    },
   ]);
 
   function closeAllPanels(): void {
@@ -71,7 +61,7 @@ function work() {
       </Head>
       <div className="w-full px-5 md:px-0">
         <h1 className="text-2xl">My Works</h1>
-        <p>Select from my proudest works 3 projects</p>
+        <p>Selected from my proudest works {projects.length} projects</p>
         <div className="flex flex-wrap mt-10">
           {projects.map((item: Project, i: number) => (
             <Project
