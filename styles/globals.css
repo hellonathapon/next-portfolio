@@ -98,4 +98,8 @@ a {
     background: transparent;
     pointer-events: none;
   }
+  .adjust-image {
+    width: 640px;
+    height: 300px;
+  }
 }

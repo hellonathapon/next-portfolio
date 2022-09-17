@@ -1,6 +1,7 @@
 import { StaticImageData } from "next/image";
 import React from "react";
 import ParseColor, { StackColors } from "../utils/parseColor";
+import Image from "next/image";
 
 interface Props {
   title: string;
@@ -17,6 +18,12 @@ function Project({ title, desc, imgPath, stack, urls }: Props) {
     <div className="mb-10">
       <figure className="rounded-md overflow-hidden">
         <img className="w-full" src={imgPath.src} alt="project image" />
+        {/* <Image
+          src={imgPath.src}
+          alt={`${title} image`}
+          layout="fill"
+          objectFit="cover"
+        /> */}
       </figure>
       <article className="p-5">
         <div className="flex gap-2 justify-between">

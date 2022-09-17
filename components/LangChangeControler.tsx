@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { AppContext } from "../context/AppContext";
+import Image from "next/image";
 
 function LangChangeControler() {
   const { dispatch, state } = useContext(AppContext);
@@ -15,9 +16,9 @@ function LangChangeControler() {
     >
       <figure className="relative w-7 h-7 overflow-hidden border-2 rounded-full">
         {state.appMechanics.lang.selected === "en" ? (
-          <img className="w-full" src="en.png" alt="UK flag icon" />
+          <Image src="/en.png" alt="UK flag" layout="fill" />
         ) : (
-          <img className="w-full" src="th.png" alt="Thailand flag icon" />
+          <Image src="/th.png" alt="Thailand flag" layout="fill" />
         )}
       </figure>
     </div>

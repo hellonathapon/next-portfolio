@@ -15,4 +15,31 @@ export default {
     programming: "Typescript, Go, Dart, Python",
     fields: "พัฒนาเว็บไซส์, พัฒนาแอปพลิเคชั่นโทรศัพท์มือถือ, วิเคราะห์ข้อมูล",
   },
+
+  homePage: {
+    creator: {
+      name: "ณัฐพล บุญทองแก้ว",
+      title: "นักพัฒนาเว็บไซส์และแอพพริเคชั่นโทรศัทพ์มือถือ Cross platforms",
+    },
+    desc: {
+      aboutMe: "",
+    },
+    timeline: {
+      1996: "",
+      2020: "",
+      present: "",
+    },
+    skills: {
+      programming: "",
+      crucials: "",
+      fields: "",
+    },
+  },
+  workPage: {
+    header: {
+      title: "",
+      desc: "",
+    },
+    projects: [],
+  },
 };
