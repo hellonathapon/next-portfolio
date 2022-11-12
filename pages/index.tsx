@@ -38,10 +38,10 @@ const Home: NextPage = () => {
             <div className="px-5 flex flex-col justify-between items-center md:flex-row">
               <article className="flex-1">
                 <h1 className="text-3xl dark:col-title font-bold font-MPLUSRounded1c">
-                  {lang.creator.name}
+                  {lang.homePage.creator.name}
                 </h1>
                 <p className="text-lg font-MPLUSRounded1c">
-                  {lang.creator.title}
+                  {lang.homePage.creator.title}
                 </p>
               </article>
               <figure className="w-28 h-28 rounded-full overflow-hidden">
@@ -53,59 +53,30 @@ const Home: NextPage = () => {
               </figure>
             </div>
 
+
             <div className="mt-5">
               <div className="flex">
-                <p className="font-bold underline text-lg mb-3">Work</p>
+                <p className="font-bold underline text-lg mb-3">{lang.homePage.about.labels}</p>
               </div>
-              <p className="dark:readable-white-text">{lang.works.text}</p>
+              <p className="dark:readable-white-text text-sm leading-relaxed">{lang.homePage.about.text}</p>
             </div>
+
+            <div className="mt-5 leading-10">
+              <p className="font-bold underline text-lg mb-3 leading-loose">{lang.homePage.bio.labels[0]}</p>
+
+              <p className="dark:readable-white-text text-sm leading-loose"><b className="mr-5">{lang.homePage.bio.labels[1]}</b>{lang.homePage.bio[1996]}</p>
+
+              <p className="dark:readable-white-text text-sm leading-loose"><b className="mr-5">{lang.homePage.bio.labels[2]}</b>{lang.homePage.bio[2020]}</p>
+
+              <p className="dark:readable-white-text text-sm leading-loose"><b className="mr-5">{lang.homePage.bio.labels[3]}</b> {lang.homePage.bio.ktt}</p>
+
+              <p className="dark:readable-white-text text-sm leading-loose"><b className="mr-5">{lang.homePage.bio.labels[4]}</b> {lang.homePage.bio.bss}</p>
+
+            </div>
+
 
             <div className="mt-5">
-              <p className="font-bold underline text-lg mb-3">Bio</p>
-
-              <div className="flex gap-3">
-                <p>
-                  <b>1996</b>
-                </p>
-                <p className="dark:readable-white-text">{lang.bio[1996]}</p>
-              </div>
-
-              <div className="flex gap-3">
-                <p>
-                  <b>2020</b>{" "}
-                </p>
-                <p className="dark:readable-white-text">{lang.bio[2020]}</p>
-                {/* <a
-                  className="underline dark:text-sky-500"
-                  href="https://www.mcu.ac.th/"
-                >
-                  MCU Buddhist University
-                </a>
-                , Ayutthaya */}
-              </div>
-
-              <div className="flex gap-3">
-                <p>
-                  <b className="">2022-Present</b>
-                </p>
-                <p className="dark:readable-white-text">{lang.bio.present}</p>
-              </div>
-
-              {/* <p>
-                I am a kind of person who found coding is fun not just a career
-                to earning, Everything related to Computer Sciences, technology,
-                Space i love it
-              </p> */}
-            </div>
-
-            <div className="mt-7">
-              <p className="font-bold underline text-lg mb-3">Skills</p>
-              <p>Programming Languages: Typescript, Go, Dart, Python</p>
-              <p>Fields: Web development, Mobile development, Data analysis,</p>
-            </div>
-
-            <div className="mt-5">
-              <p className="font-bold underline text-lg mb-3">Contact</p>
+              <p className="font-bold underline text-lg mb-3">{lang.homePage.contacts.labels[0]}</p>
 
               <div className="flex items-center mb-3">
                 <figure className="w-7 h-7">

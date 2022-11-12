@@ -23,6 +23,12 @@ function Sidebar() {
         >
           <Link href="/work">Works</Link>
         </li>
+        <li
+          onClick={closeSidebar}
+          className="flex flex-row justify-center items:center gap-1 hover:underline hover:cursor-pointer"
+        >
+          <Link href="/work">Blogs</Link>
+        </li>
 
         <a
           href="https://github.com/hellonathapon"
