@@ -10,9 +10,10 @@ function LangChangeControler() {
   }
 
   return (
-    <div
+    <button
       onClick={HandleToggleLang}
       className="rounded-md p-2 cursor-pointer mr-3"
+      tabIndex={1}
     >
       <figure className="relative w-7 h-7 overflow-hidden border-2 rounded-full">
         {state.appMechanics.lang.selected === "en" ? (
@@ -21,7 +22,7 @@ function LangChangeControler() {
           <Image src="/th.png" alt="Thailand flag" layout="fill" />
         )}
       </figure>
-    </div>
+    </button>
   );
 }
 

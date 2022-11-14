@@ -34,6 +34,7 @@ const Home: NextPage = () => {
           {/* <h1 className="text-6xl text-center mt-20">Nathapon</h1>
           <pre className="text-center">{`string greeting() => hello world;`}</pre> */}
 
+          {/* Creator info. */}
           <div className="tracking-wider mt-10">
             <div className="px-5 flex flex-col justify-between items-center md:flex-row">
               <article className="flex-1">
@@ -53,16 +54,18 @@ const Home: NextPage = () => {
               </figure>
             </div>
 
-
+            {/* About me */}
             <div className="mt-5">
               <div className="flex">
-                <p className="font-bold underline text-lg mb-3">{lang.homePage.about.labels}</p>
+                <p tabIndex={2} className="font-bold underline text-lg mb-3">{lang.homePage.about.labels}</p>
               </div>
               <p className="dark:readable-white-text text-sm leading-relaxed">{lang.homePage.about.text}</p>
             </div>
 
+
+            {/* Bio */}
             <div className="mt-5 leading-10">
-              <p className="font-bold underline text-lg mb-3 leading-loose">{lang.homePage.bio.labels[0]}</p>
+              <p tabIndex={2} className="font-bold underline text-lg mb-3 leading-loose">{lang.homePage.bio.labels[0]}</p>
 
               <p className="dark:readable-white-text text-sm leading-loose"><b className="mr-5">{lang.homePage.bio.labels[1]}</b>{lang.homePage.bio[1996]}</p>
 
@@ -74,9 +77,9 @@ const Home: NextPage = () => {
 
             </div>
 
-
+            {/* Contacts */}
             <div className="mt-5">
-              <p className="font-bold underline text-lg mb-3">{lang.homePage.contacts.labels[0]}</p>
+              <p tabIndex={2} className="font-bold underline text-lg mb-3">{lang.homePage.contacts.labels[0]}</p>
 
               <div className="flex items-center mb-3">
                 <figure className="w-7 h-7">

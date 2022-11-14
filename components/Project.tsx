@@ -27,14 +27,14 @@ function Project({ title, desc, imgPath, stack, urls }: Props) {
       </figure>
       <article className="p-5">
         <div className="flex gap-2 justify-between">
-          <h1 className="text-2xl md:text-4xl font-bold">{title}</h1>
+          <h1 tabIndex={2} className="text-2xl md:text-4xl font-bold">{title}</h1>
           <div className="flex gap-5 justify-center items-center">
             {urls.liveURL ? (
-              <a href={urls.liveURL} target="_blank" rel="noopener">
+              <a tabIndex={2} href={urls.liveURL} target="_blank" rel="noopener">
                 <p className="hover:underline cursor-pointer">🔥Live</p>
               </a>
             ) : null}
-            <a href={urls.sourceURL} target="_blank" rel="noopener">
+            <a tabIndex={2} href={urls.sourceURL} target="_blank" rel="noopener">
               <div className="cursor-pointer">
                 <figure className="flex justify-center items-center">
                   <svg

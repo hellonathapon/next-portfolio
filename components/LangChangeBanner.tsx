@@ -6,7 +6,7 @@ function LangChangeBanner() {
   const { state, dispatch } = useContext(AppContext);
   const router = useRouter();
 
-  function handleChangeLang(e: React.MouseEvent<HTMLLIElement>) {
+  function handleChangeLang(e: React.MouseEvent<HTMLButtonElement>) {
     const target = e.target as Element;
     const value = target.getAttribute("data-value");
     //* change language in App context
@@ -26,22 +26,24 @@ function LangChangeBanner() {
           state.appMechanics.lang.isOpen ? "flex" : "hidden"
         } bg-white dark:bg-[#202023] w-28 rounded-md border border-1`}
       >
-        <ul className="h-full w-full">
-          <li
+        <div className="h-full w-full">
+          <button
             data-value="en"
             onClick={handleChangeLang}
-            className="p-2 pointer-events-auto cursor-pointer hover:bg-slate-200 hover:dark:bg-[#37373a]"
+            className="p-2 w-full pointer-events-auto cursor-pointer hover:bg-slate-200 hover:dark:bg-[#37373a]"
+            tabIndex={1}
           >
             English
-          </li>
-          <li
+          </button>
+          <button
             data-value="th"
             onClick={handleChangeLang}
-            className="p-2 pointer-events-auto cursor-pointer hover:bg-slate-200 hover:dark:bg-[#37373a]"
+            className="p-2 w-full pointer-events-auto cursor-pointer hover:bg-slate-200 hover:dark:bg-[#37373a]"
+            tabIndex={1}
           >
             Thai
-          </li>
-        </ul>
+          </button>
+        </div>
       </div>
     </div>
   );

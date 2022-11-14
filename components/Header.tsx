@@ -33,7 +33,7 @@ function header() {
     e
   ) => {
     if (e.key === "Enter") {
-      setTheme("light");
+      setTheme("dark");
     } else {
       return;
     }
@@ -42,7 +42,7 @@ function header() {
     e
   ) => {
     if (e.key === "Enter") {
-      setTheme("dark");
+      setTheme("light");
     } else {
       return;
     }
@@ -56,9 +56,9 @@ function header() {
     if (currentTheme === "dark") {
       return (
         <button
-          onKeyDown={() => setTheme("light")}
           onClick={() => setTheme("light")}
           onKeyPress={handleLightKeyPress}
+          tabIndex={1}
         >
           <svg viewBox="0 0 24 24" className="w-6 h-6">
             <g
@@ -84,9 +84,9 @@ function header() {
     } else {
       return (
         <button
-          onKeyDown={() => setTheme("dark")}
           onClick={() => setTheme("dark")}
           onKeyPress={handleDarkKeyPress}
+          tabIndex={1}
         >
           <svg viewBox="0 0 24 24" className="w-6 h-6">
             <path
@@ -113,24 +113,24 @@ function header() {
     <header className="fixed top-0 w-full flex">
       <div className="max-w-screen-md backdrop-blur-md bg-white/30 dark:bg-[#202023]/75 dark:bg-highlight w-full py-3 mx-auto flex flex-row justify-center px-5 md:px-0">
         <Link href="/">
-          <div className="flex justify-center items-center cursor-pointer">
+          <button tabIndex={1} className="flex justify-center items-center cursor-pointer">
             <figure className="relative">
               <img className="w-8 h-8" src="/icon.png" alt="nathapon" />
             </figure>
             <p className="font-bold ml-1">NATHAPON</p>
-          </div>
+          </button>
         </Link>
 
         <ul className="hidden h-full ml-3 gap-3 self-end md:flex md:flex-row md:justify-center md:items-center">
           <li className="hover:underline hover:cursor-pointer">
             <Link href="/work">
-              <a>{lang.header.navLinks.works}</a>
+              <a tabIndex={1}>{lang.header.navLinks.works}</a>
             </Link>
           </li>
 
           <li className="hover:underline hover:cursor-pointer">
             <Link href="/blogs">
-              <a>{lang.header.navLinks.blogs}</a>
+              <a tabIndex={1}>{lang.header.navLinks.blogs}</a>
             </Link>
           </li>
 
@@ -138,6 +138,7 @@ function header() {
             href="https://github.com/hellonathapon"
             target="_blank"
             rel="noopener"
+            tabIndex={1}
           >
             <li className="flex flex-row justify-center items:center gap-1 hover:underline hover:cursor-pointer">
               <figure className="flex justify-center items-center">
@@ -175,11 +176,11 @@ function header() {
           {renderThemeChanger()}
 
           {/* Hamburger menu toggle */}
-          <button onClick={handleTestClick} className="ml-3">
+          <button tabIndex={1} onClick={handleTestClick} className="ml-3 md:hidden">
             <svg
               viewBox="0 0 20 20"
               fill="currentColor"
-              className="w-6 h-6 dark:text-white text-gray-700 md:hidden"
+              className="w-6 h-6 dark:text-white text-gray-700 "
             >
               <path
                 fillRule="evenodd"

@@ -38,8 +38,8 @@ export default {
         available: 'live'
       },
       {
-        title: "Catloaf",
-        desc: "Mobile Todo List Application to manage your daily life tasks",
+        title: "Petrichor",
+        desc: "Mobile Weather Application",
         available: 'apk'
       },
     ],
